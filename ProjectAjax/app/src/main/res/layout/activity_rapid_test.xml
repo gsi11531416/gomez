@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fondo" >
+
+    <TextView
+        android:id="@+id/tituloPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/titulo"
+        tools:context=".RapidTest" />
+
+    
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tituloPrincipal"
+        android:layout_centerHorizontal="true" 
+        android:layout_marginTop="5dp"
+        android:background="@drawable/boton"
+        android:gravity="center"
+        android:onClick="lanzarRapidText"
+        android:text="@string/play_juego" />
+    
+    <Button android:id="@+id/puntuaciones"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" 
+         android:layout_below="@id/play" 
+         android:layout_centerHorizontal="true" 
+         android:layout_marginTop="5dp" 
+         android:background="@drawable/boton" 
+         android:gravity="center" 
+         android:onClick="lanzarPuntuaciones" 
+         android:text="@string/rankingtest" />
+
+</RelativeLayout>

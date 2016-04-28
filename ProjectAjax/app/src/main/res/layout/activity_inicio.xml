@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/tit"
+        android:contentDescription="@string/app_name" />
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_rojo"
+        android:text="@string/play" />
+
+    <Button
+        android:id="@+id/btn_conf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_play"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/btn_rojo"
+        android:text="@string/conf" />
+    
+   	<Button
+   	    android:id="@+id/btn_puntuaciones"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:layout_below="@+id/btn_conf"
+   	    android:layout_centerHorizontal="true"
+   	    android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+   	    android:background="@drawable/btn_rojo"
+   	    android:text="@string/ranking" />
+
+    <ImageView
+        android:id="@+id/logros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/titulo"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="19dp"
+        android:contentDescription="@string/logros"
+        android:src="@drawable/logros" />
+
+    <ImageView
+        android:id="@+id/acerca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/titulo"
+        android:layout_alignTop="@+id/logros"
+        android:contentDescription="@string/acerca"
+        android:src="@drawable/info" />
+
+
+
+</RelativeLayout>

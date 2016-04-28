@@ -1,0 +1,937 @@
+<resources>
+    <string name="app_name">AJAX</string>
+
+    <string name="app_name2">Desarrollador</string>
+    <string name="informacion">Desarrollador \n
+        \n
+        María del Carmen Gómez Castañeda\n
+        19 Años\n
+        Universidad Tecnologica del Norte de Guanajuato\n
+        T.S.U Sistemas Informáticos\n
+        Dolores Hidalgo C.I.N Gto.\n
+        \n
+        Proyecto: Desarrollo de Aplicaciones III\n
+        Profesor Encargado: Anastacio Rodríguez Garcia</string>
+
+
+    <string name="inf_princ">\n AJAX, acrónimo de Asynchronous JavaScript And XML (JavaScript asíncrono y XML), es una técnica de desarrollo web para crear aplicaciones interactivas o RIA (Rich Internet Applications).</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="modulo">
+        <item> AJAX - XMLHttp </item>
+        <item> AJAX - Solicitar </item>
+        <item> AJAX - Respuesta </item>
+        <item> AJAX - Eventos </item>
+        <item> AJAX - PHP </item>
+        <item> QUIZ DE CERTIFICACIÓN </item>
+    </string-array>
+
+    <!-- **************** AJAX XMLHTTP  ****************** -->
+
+    <string-array name="modulo1">
+        <item>Introducción</item>
+        <item>Historia</item>
+        <item>Evolución de la Interfaz</item>
+        <item>Implementación y uso de la Interfaz</item>
+        <item>Identificación del Juego de Caracteres</item>
+        <item>Instalación del Objeto</item>
+        <item>Navegadores que permiten AJAX</item>
+        <item>Quiz del Módulo</item> <!--  8 items -->
+    </string-array>
+
+
+    <string-array name="modulo1_contenido">
+        <item>Es una interfaz empleada para realizar peticiones HTTP y HTTPS a servidores Web...</item>
+        <item>La primera versión de la interfaz XMLHttpRequest fue desarrollada por Microsoft...</item>
+        <item>El 26 de febrero de 2008 se publicó la primera versión de la especificación XMLHttpRequest Level 2...</item>
+        <item>XMLHttpRequest es una interfaz para realizar llamadas mediante HTTP, por lo que es recomendable...</item>
+        <item>Otro elemento importante en la especificación, es el manejo de juegos de caracteres u hojas de códigos...</item>
+        <item>A continuación se muestra un posible código JavaScript que permite crear el objeto teniendo...</item>
+        <item>Ha de tenerse en cuenta que ésta es una lista general, y el soporte de las aplicaciones Ajax...</item>
+        <item>Realización del quiz...</item>
+    </string-array>
+
+    <string-array name="modulo1_contenido_completo">
+        <item>Es una interfaz empleada para realizar peticiones HTTP y HTTPS a servidores Web. Para los datos transferidos se usa cualquier codificación basada en texto, incluyendo: texto plano, XML, JSON, HTML y codificaciones particulares específicas. La interfaz se implementa como una clase de la que una aplicación cliente puede generar tantas instancias como necesite para manejar el diálogo con el servidor. El uso más popular, si bien no el único, de esta interfaz es proporcionar contenido dinámico y actualizaciones asíncronas en páginas WEB mediante tecnologías construidas sobre ella como por ejemplo AJAX</item>
+        <item>La primera versión de la interfaz XMLHttpRequest fue desarrollada por Microsoft que la introdujo en la versión 5.0 de Internet Explorer.1 Esta primera versión se publicó utilizando un objeto ActiveX, lo que significa que podía ser utilizada desde cualquier entorno de desarrollo de software con soporte para esta tecnología, es decir, la práctica totalidad de plataformas generalistas de desarrollo para Microsoft Windows. Microsoft ha seguido manteniendo y actualizando esta tecnología incluyendo la funcionalidad dentro del Microsoft XML Parser MSXML en sus sucesivas versiones. A partir de la versión 7 de Internet Explorer la interfaz se ofrece de manera integrada.1 Al ser integrada, el acceso a la interfaz se realiza enteramente con objetos JScript o VBScript proporcionados por el navegador y no mediante bibliotecas externas. El proyecto Mozilla incorporó la primera implementación integrada de XMLHttpRequest en la versión 1.0 de la Suite Mozilla en 2002. Esta implementación sería seguida por Apple a partir de Safari 1.2, Konqueror, Opera Software a partir del Opera 8.0 e iCab desde la versión 3.0 El World Wide Web Consortium presentó el 27 de septiembre de 2006 el primer borrador de una especificación estándar de la interfaz.2 La versión actual de 17 de enero de 2012, denominada XMLHttpRequest Level 2 es el resultado de varias revisiones.3 Mientras no se alcance una versión definitiva, los desarrolladores de aplicaciones WEB deberán tener en cuenta las diferencias entre implementaciones o bien utilizar paquetes o frameworks que realicen esta función</item>
+        <item>El 26 de febrero de 2008 se publicó la primera versión de la especificación XMLHttpRequest Level 2. Esta nueva especificación, que se inicia antes de haber publicado la versión definitiva de la interfaz, pretende añadir nuevas funciones como: peticiones entre dominios cross-site, eventos de progreso y manejo de flujos de bytes streams tanto para el envío como para la recepción.</item>
+        <item>XMLHttpRequest es una interfaz para realizar llamadas mediante HTTP, por lo que es recomendable un buen conocimiento de este protocolo. Es importante el manejo correcto de la cache en el servidor HTTP, en los proxy cache intermedios y en el navegador WEB. La interfaz se implementa en una clase de la que se debe crear una nueva instancia mediante el constructor adecuado. Es posible realizar peticiones síncronas y asíncronas al servidor. Cuando las operaciones son síncronas la ejecución del programa se detiene hasta que se completa la operación. En una llamada asíncrona el flujo de proceso no se detiene a esperar la respuesta sino que esta continúa en segundo plano y se define un manejador de evento que se ejecutará cuando se complete la petición.</item>
+        <item>Otro elemento importante en la especificación, es el manejo de juegos de caracteres u hojas de códigos. La codificación y decodificación de texto y la identificación de los juegos de caracteres mediante cabeceras HTTP y tipos MIME. El estándar XMLHttpRequest recomienda UTF-8 para la codificación de cadenas de texto.3\n
+                                \n
+                                Para determinar la codificación de los datos transmitidos se usa el siguiente algoritmo, utilizando la primera opción que se cumpla:\n
+                                \n
+                                Si los datos transmitidos son XML o HTML, y así se identifica mediante la correspondiente cabecera Content-Type de HTTP, la codificación se detectará siguiendo las reglas de XML o HTML según corresponda.\n
+                                Si la cabecera HTTP especifica un tipo MIME mediante Content-Type e identifica un juego de caracteres se utiliza dicho juego de caracteres.\n
+                                Si los datos enviados especifican un BOM válido, se utilizará la variante UTF determinada por dicho BOM.\n
+                                Utilizar UTF-8.\n
+                                Si no se identifica correctamente la codificación, existe el riesgo de que en un sistema en el que se mezclen varias codificaciones puedan producirse errores de visualización de caracteres. Por ejemplo al incorporar funcionalidad AJAX, que por defecto utiliza UTF-8, a una página WEB codificada con ISO 8859-1.
+                        </item>
+        <item>A continuación se muestra un posible código JavaScript que permite crear el objeto teniendo en cuenta las diferencias entre los navegadores más populares.
+                                \n
+                                var httpRequest;\n
+                                if window.XMLHttpRequest\n
+                                {\n
+                                //El explorador implementa la interfaz de forma nativa\n
+                                httpRequest = new XMLHttpRequest;\n
+                                } \n
+                                else if window.ActiveXObject\n
+                                {\n
+                                //El explorador permite crear objetos ActiveX\n
+                                try {\n
+                                httpRequest = new ActiveXObject\"MSXML2.XMLHTTP\";\n
+                                } catch e {\n
+                                try {\n
+                                httpRequest = new ActiveXObject\"Microsoft.XMLHTTP\";\n
+                                } catch e {}\n
+                                }\n
+                                }\n
+                                if !httpRequest\n
+                                {\n
+                                alert\"No ha sido posible crear una instancia de XMLHttpRequest\";\n
+                                }</item>
+        <item>Ha de tenerse en cuenta que ésta es una lista general, y el soporte de las aplicaciones Ajax dependerá de las características que el navegador permita.\n
+                                \n
+                                Navegadores basados en Gecko como Mozilla, Mozilla Firefox, SeaMonkey, Camino, K-Meleon, IceWeasel, Flock, Epiphany, Galeon y Netscape versión 7.1 y superiores\n
+                                Navegadores basados en WebKit como Google Chrome de Google o Safari de Apple.\n
+                                Microsoft Internet Explorer para Windows versión 5.0 y superiores, y los navegadores basados en él\n
+                                Navegadores con el API KHTML versión 3.2 y superiores implementado, incluyendo Konqueror versión 3.2 y superiores y el Web Browser for S60 de Nokia tercera generación y posteriores\n
+                                Opera versión 8.0 y superiores, incluyendo Opera Mobile Browser versión 8.0 y superiores.
+                        </item>
+        <item>Refuerza tus conocimientos!!! </item>
+    </string-array>
+
+    <!-- **************** AJAX SOLICITAR  ****************** -->
+    <string-array name="modulo2">
+        <item>Inicia y Procesa una petición</item>
+        <item>Orden de Activación</item>
+        <item>Portatibilidad</item>
+        <item>Quiz del Módulo</item>
+    </string-array>
+
+    <string-array name="modulo1_geo">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="modulo2_contenido">
+        <item>Ajax.Request es una clase de propósito general para realizar peticiones HTTP...</item>
+        <item>onCreate esto es en realidad una devolución de llamada reservada a Ajax.Responders ...</item>
+        <item>Dependiendo de cómo el navegador implementa XMLHttpRequest , uno o más devoluciones de...</item>
+        <item>Realización del quiz...</item>
+    </string-array>
+
+    <string-array name="modulo2_contenido_completo">
+        <item>Ajax.Request es una clase de propósito general para realizar peticiones HTTP que gestiona el ciclo de vida de la solicitud, se encarga de la plancha de caldera, y le permite enchufar funciones de devolución de llamada personalizados para sus necesidades. En el opcional opciones de hash, por lo general proporciona un onComplete y / o onSuccess de devolución de llamada, a menos que estés en el caso extremo en el que está recibiendo una respuesta escrito en JavaScript, que será automáticamente eval.</item>
+        <item>onCreate esto es en realidad una devolución de llamada reservada a Ajax.Responders \n
+                                onUninitialized mapas sobre Creado\n
+                                onloading mapas en Initialized\n
+                                onLoaded mapas de solicitud enviada\n
+                                onInteractive mapas en respuesta siendo recibidos\n
+                                en XYZ código de estado de respuesta numérica, onSuccess o onFailure véase más adelante\n
+                                onComplete"\n
+                                Los dos últimos pasos, tanto la correspondencia en respuesta recibida , en ese orden. Si se define una devolución de llamada específicas del estado, que se invoca. De lo contrario, si onSuccess se define y la respuesta se considera un éxito véase más adelante, se invoca. De lo contrario, si onFailure se define como la respuesta es no considerada un éxito, se invoca.
+                                Sólo después de que el potencial de primera devolución de llamada se onComplete llama.
+                        </item>
+        <item>Dependiendo de cómo el navegador implementa XMLHttpRequest , uno o más devoluciones de llamada no se pueden invocar. En particular, onLoaded y onInteractive no son una apuesta segura 100% hasta el momento. Sin embargo, lo global onCreate , onUninitialized y los dos pasos finales son mucho garantizada.
+                                \n
+                                onSuccess y onFailure , las devoluciones de llamada infrautilizados\n
+                                \n
+                                Demasiadas personas utilizan Ajax.Request de una manera similar a XHR prima, que define una única onComplete de devolución de llamada, incluso cuando sólo están interesados \u200B\u200Ben las respuestas \"exitosos\"  probando de esta manera con la mano:\n
+                                \n
+                                // Esto es muy malo, no hay mejor! \n
+                                Nueva Ajax.Request  \' / tu / url \' , {\n
+                                   onComplete : función respuesta {\n
+                                     si  200 Response.Status ==\n
+                                       // bla bla bla\n
+                                  }\n
+                                };\n
+                                En primer lugar, tal como se describe a continuación, se puede usar una mejor detección de \"éxito\": el éxito se define en general, HTTP-sabia, ya sea como ningún estado de respuesta o un estado de respuesta \"2xy\" por ejemplo, 201 es un éxito, también. Véase el siguiente ejemplo.\n
+                                \n
+                                En segundo lugar, se puede prescindir de la prueba por completo el estado! Prototipo añade devoluciones de llamada específicos para el éxito y el fracaso, que se enumeran más arriba. Esto es lo que podría hacer si usted está interesado sólo en el éxito, por ejemplo:\n
+                                \n
+                                nueva Ajax.Request  \' / tu / url \' , {\n
+                                   onSuccess : función respuesta {\n
+                                       // bla bla bla\n
+                                  }\n
+                                }</item>
+        <item>Refuerza tus conocimientos!!!</item>
+    </string-array>
+
+
+    <!-- **************** AJAX RESPUESTA ****************** -->
+
+    <string-array name="modulo3">
+        <item>Respuestas del Servidos</item>
+        <item>Ejemplo de la Funcion</item>
+        <item>ReadyState</item>
+        <item>Propiedades Importantes</item>
+        <item>Quiz del Módulo</item>
+    </string-array>
+
+    <string-array name="modulo3_geo">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="modulo3_contenido">
+        <item>Ahora que el XHR mágica ha creado una instancia, que a continuación puede consultar...</item>
+        <item>A continuación se muestra una función muy simple que sirve como controlador de...</item>
+        <item>El significado de los diversos readyState de la siguiente manera:...</item>
+        <item>Estas son algunas de las propiedades importantes de XHR...</item>
+        <item>Realización del quiz...</item>
+    </string-array>
+
+    <string-array name="modulo3_contenido_completo">
+        <item>Ahora que el XHR mágica ha creado una instancia, que a continuación puede consultar un recurso del servidor y esperar una respuesta del servidor. Antes de llegar a ver cómo consultar el servidor, vamos a definir cómo manejar la respuesta del servidor.\n
+                                \n
+                                En el proceso de hacer una solicitud al servidor, XHR pasa a través de cinco 5 estados. El estado actual de XHR está representado por readyState característica de XHR.\n
+                                \n
+                                onreadystatechange desencadena el evento everytime cambios readyState. La función que se encarga de la respuesta del servidor se conoce como controlador de estado preparado.
+                        </item>
+        <item>A continuación se muestra una función muy simple que sirve como controlador de estado listo.
+                                \n
+                                xhr.onreadystatechange = function  {\n
+                                    si xhr.readyState 4   // mientras espera la respuesta del servidor\n
+                                        . Document.getElementById  \'div1\' innerHTML = \"Cargando ...\";\n
+                                    else if xhr.readyState === 4 {                 // 4 = respuesta del servidor se ha cargado por completo. \n
+                                        si == 200  xhr.status 300 xhr.status   // http estado entre 200 a 299 son todo un éxito\n
+                                            document.getElementById  \'div1\' innerHTML = xhr.responseText.;\n
+                                    }\n
+                                }\n
+                                Mientras cliente de navegador espera la respuesta del servidor xhr.readyState 4 , que llenan con div1 \"Cargando ...\" para que el usuario será esperar pacientemente el resultado.\n
+                                \n
+                                Cuando Reponse servidor ha sido completa / hecho  xhr.readyState === 4 . A continuación, compruebe si el estado HTTP es de entre 200 a 299  si == xhr.status 200  xhr.status 300 , en caso afirmativo, significa que la solicita ha sido un éxito. Para aprender más acerca de código de estado, consulte Definición del estado Código\n
+                                \n
+                                En pocas palabras, significa simplemente una vez que la respuesta del servidor se ha completado y el estado HTTP es el éxito, la función rellena el contenido del elemento a cortar div1.
+                       </item>
+        <item>El significado de los diversos readyState de la siguiente manera:\n
+                                0 UNSENT Después de haber creado el objeto XMLHttpRequest, pero antes de que haya llamado al método open .\n
+                                1 ABRIÓ Después de que el método abierto se ha invocado con éxito, la propiedad readyState del objeto XMLHttpRequest se le debe asignar un valor de 1.\n
+                                2 HEADERS_RECEIVED Después de que el método de envío se ha invocado y se han recibido las cabeceras de respuesta HTTP, la propiedad readyState del objeto XMLHttpRequest se le debe asignar un valor de 2.\n
+                                3 CARGANDO Una vez que el contenido de la respuesta HTTP empieza a cargarse, la propiedad readyState del objeto XMLHttpRequest se le debe asignar un valor de 3.\n
+                                4 HECHO Una vez que el contenido de la respuesta HTTP ha terminado de cargar, la propiedad readyState del objeto XMLHttpRequest se le debe asignar un valor de 4.
+                        </item>
+        <item>Estas son algunas de las propiedades importantes de XHR.\n
+                                propiedades\tdescripciones\n
+                                readyState\tDevolver el estado actual del objeto XHR. Los valores posibles son 0,1,2,3,4\n
+                                responseText\tRespuesta del servidor en texto sin formato.\n
+                                responseXML\tLa respuesta a la solicitud como un objeto DOM de documentos, la respuesta se puede analizar como XML o HTML. El atributo tiene responseXML XML en su nombre por razones históricas. También devuelve recursos HTML como documentos.\n
+                                estado\tEl estado de la respuesta a la solicitud. es decir, 200 = 404 = OK y la página no encontrada. Si usted está interesado en saber lo que significa que el resto del valor de estado, consulte Código de estado Definiciones por el W3C.\n
+                                statusText\tLa cadena de respuesta devuelto por el servidor HTTP. por ejemplo, \"200 OK\.
+                        </item>
+        <item>Refuerza tus conocimientos!!!</item>
+    </string-array>
+
+    <!-- **************** AJAX EVENTOS  ****************** -->
+
+    <string-array name="modulo4">
+        <item>JavaScript y AJAX</item>
+        <item>AJAX Eventos</item>
+        <item>Lista de Eventos Primera Parte</item>
+        <item>Lista de Eventos Segunda Parte</item>
+        <item>Combinación de Tecnologías</item>
+        <item>Quiz del Módulo</item>
+    </string-array>
+
+    <string-array name="modulo4_geo">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="modulo4_contenido">
+        <item>JavaScript es el lenguaje interpretado scripting language en el que normalmente se...</item>
+        <item>Peticiones Ajax producen una serie de diferentes eventos que se puede suscribir...</item>
+        <item>Esta es la lista completa de eventos Ajax, y en el orden en que se desencadenan... </item>
+        <item>ajaxError Evento Global...</item>
+        <item>XHTML o HTML y hojas de estilos en cascada CSS para el diseño...</item>
+        <item>Realización del quiz...</item>
+
+    </string-array>
+
+    <string-array name="modulo4_contenido_completo">
+        <item>JavaScript es el lenguaje interpretado scripting language en el que normalmente se efectúan las funciones de llamada de Ajax mientras que el acceso a los datos se realiza mediante XMLHttpRequest, objeto disponible en los navegadores actuales. En cualquier caso, no es necesario que el contenido asíncrono esté formateado en XML.
+                                \n
+                                Ajax es una técnica válida para múltiples plataformas y utilizable en muchos sistemas operativos y navegadores dado que está basado en estándares abiertos como JavaScript y Document Object Model DOM.</item>
+        <item>Peticiones Ajax producen una serie de diferentes eventos que se puede suscribir. He aquí una lista completa de los hechos y en qué orden se activan.
+                                \n
+                                Hay dos tipos de eventos:\n
+                                \n
+                                Eventos locales\n
+                                \n
+                                Estas son las devoluciones de llamada que puede suscribirse a la petición dentro del objeto Ajax, así:\n
+                                 $ .ajax {\n
+                                   beforeSend: la función  {\n
+                                     // Procesar el evento beforeSend\n
+                                   },\n
+                                   completar: la función  {\n
+                                     // Procesar el evento complete\n
+                                   }\n
+                                   // ......\n
+                                 };\n
+                                Eventos globales\n
+                                \n
+                                Estos eventos se desencadenan en el documento , llamando a cualquier controlador que puede estar escuchando. Se puede detectar estos eventos, así:\n
+                                \n
+                                 $ Document .bind  \"ajaxSend\", function  {\n
+                                   $  \"# Carga\" show .;\n
+                                 }. Enlazar  \"ajaxComplete\", function  {\n
+                                   $  \"# Carga\" ocultar .;\n
+                                 };\n
+                                Eventos globales se pueden desactivar para una petición Ajax en particular pasando en la opción global, así:\n
+                                \n
+                                 $ .ajax {\n
+                                   url: \"test.html\" ,\n
+                                   mundial: falso ,\n
+                                   // ...\n
+                                };</item>
+        <item>Esta es la lista completa de eventos Ajax, y en el orden en que se desencadenan. Los eventos se desencadenan con sangría para todos y cada petición Ajax a menos que sea una opción global se ha establecido. Los eventos ajaxStart y ajaxStop son eventos que se relacionan con todas las peticiones Ajax juntos.\n
+                                \n
+                                ajaxStart Evento Global \n
+                                Este evento se activa cuando se inicia una petición Ajax y no hay otras peticiones Ajax se está ejecutando actualmente.\n
+                                beforeSend Evento Local \n
+                                Este evento, que se activa antes de que se inicie una petición Ajax, le permite modificar el objeto XMLHttpRequest ajuste de cabeceras adicionales, si es necesario.\n
+                                ajaxSend Evento Global \n
+                                Este evento global también se activa antes de que la solicitud se ejecuta.\n
+                                éxito Evento Local \n
+                                Este evento sólo se llama si la petición se ha realizado correctamente sin errores desde el servidor, no hay errores con los datos.\n
+                                ajaxSuccess Evento Global \n
+                                Este evento es también sólo se llama si la petición se ha realizado correctamente.\n
+                                de error Evento Local \n
+                                Este evento sólo se llama si se ha producido un error en la solicitud nunca se puede tener tanto un error y una devolución de llamada con éxito una solicitud.
+                        </item>
+        <item>ajaxError Evento Global\n
+                                "Este evento global se comporta igual que el evento de error local.\n
+                                "completa Evento Local \n
+                                "Este evento se llama independientemente de si la petición se ha realizado correctamente, o no. Siempre recibirá una devolución de llamada completa, incluso para peticiones síncronas.\n
+                                "ajaxComplete Evento Global \n
+                                "Este evento se comporta igual que el evento completo y se activará cada vez que finaliza una petición Ajax.\n
+                                "ajaxStop Evento Global \n
+                                "Este evento global se activa si no hay más solicitudes en trámite Ajax.
+                     </item>
+        <item>XHTML o HTML y hojas de estilos en cascada CSS para el diseño que acompaña a la información.\n
+                                Document Object Model DOM accedido con un lenguaje de scripting por parte del usuario, especialmente implementaciones ECMAScript como JavaScript y JScript, para mostrar e interactuar dinámicamente con la información presentada.\n
+                                El objeto XMLHttpRequest para intercambiar datos de forma asíncrona con el servidor web. En algunos frameworks y en algunas situaciones concretas, se usa un objeto iframe en lugar del XMLHttpRequest para realizar dichos intercambios. PHP es un lenguaje de programación de uso general de script del lado del servidor originalmente diseñado para el desarrollo web de contenido dinámico también utilizado en el método Ajax.\n
+                                XML es el formato usado generalmente para la transferencia de datos solicitados al servidor, aunque cualquier formato puede funcionar, incluyendo HTML preformateado, texto plano, JSON y hasta EBML.\n
+                                Como el DHTML, LAMP o SPA, Ajax no constituye una tecnología en sí, sino que es un término que engloba a un grupo de éstas que trabajan conjuntamente.
+                      </item>
+        <item>Refuerza tus conocimientos!!!</item>
+    </string-array>
+
+    <!-- **************** AJAX PHP ****************** -->
+
+    <string-array name="modulo5">
+        <item>Ejemplo de Página</item>
+        <item>Enviar datos con Formulario</item>
+        <item>Formulario de Zona de Mensajes</item>
+        <item>Acentos en XAJAX</item>
+        <item>FrameWork de XAJAX</item>
+        <item>Funciones de Xajax</item>
+        <item>Quiz del Módulo</item>
+    </string-array>
+
+    <string-array name="modulo5_geo">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="modulo5_contenido">
+        <item>Veamos ahora como realizar una página que utilice xajax, para ejecutar una sencilla...</item>
+        <item>Tenemos un par de campos de texto y un botón, que se encargará...</item>
+        <item>El formulario que hemos utilizado es muy parecido al anterior...</item>
+        <item>También vamos a ver un par de detalles acerca de los acentos en...</item>
+        <item>El trabajo con sesiones en Ajax y en concreto utilizando el framework de...</item>
+        <item>Las funciones de Xajax que permiten incluir o quitar declaraciones de estilos pertenecen...</item>
+        <item>Realización del quiz...</item>
+    </string-array>
+
+    <string-array name="modulo5_contenido_completo">
+        <item>Veamos ahora como realizar una página que utilice xajax, para ejecutar una sencilla función PHP como respuesta a una acción del usuario. El ejemplo es relativamente sencillo, incluso lo podemos hacer en pocos pasos, como una receta. Luego se podrá complicar todo lo necesario para realizar acciones más complejas.
+                                \n
+                                1 Incluir con PHP el archivo donde está la clase xajax \n
+                                \n
+                                //incluímos la clase ajax \n
+                                require \'xajax/xajax.inc.php\';\n
+                                \n
+                                2 Creamos una instancia de un objeto de la clase xajax \n
+                                \n
+                                //instanciamos el objeto de la clase xajax \n
+                                $xajax = new xajax;\n
+                                \n
+                                3 Escribimos una función en PHP, que luego llamaremos con por medio de ajax \n
+                                \n
+                                Esta función es todo lo complicado que se requiera. Realizará acciones del lado del servidor y por tanto puede acceder a bases de datos, abrir ficheros o cualquier cosa que se nos ocurra. Luego en la propia función realizaremos una instancia de un objeto AjaxResponse, que utilizaremos para mostrar resultados en la página. \n
+                                \n
+                                function si_no$entrada{ \n
+                                   if $entrada==\"true\"{ \n
+                                      \t$salida = \"Marcado\"; \n
+                                   }else{ \n
+                                      \t$salida = \"No marcado\"; \n
+                                   } \n
+                                \n
+                                   //instanciamos el objeto para generar la respuesta con ajax \n
+                                   $respuesta = new xajaxResponse; \n
+                                   //escribimos en la capa con id=\"respuesta\" el texto que aparece en $salida \n
+                                   $respuesta->addAssign\"respuesta\",\"innerHTML\",$salida; \n
+                                \n
+                                   \t//tenemos que devolver la instanciación del objeto xajaxResponse \n
+                                   return $respuesta; \n
+                                }\n
+                                \n
+                                El objeto xajaxResponse sirve para realizar acciones en la página sin tener que recargar el documento. Dispone de varios métodos o funciones, como por ejemplo addAssign que sirve para asignar un valor a una propiedad de un elemento de la página. En este caso se asigna el valor contenido en la variable $salida al innerHTML de la capa \"respuesta\", con lo que se altera el texto contenido en esa capa. \n
+                                \n
+                                4 Asociamos la función PHP al objeto xajax \n
+                                \n
+                                //asociamos la función creada anteriormente al objeto xajax \n
+                                $xajax->registerFunction\"si_no\";\n
+                                \n
+                                Esta asociación permitirá ejecutar la función PHP desde una llamada a una función Javascript. \n
+                                \n
+                                5 Antes de enviar cualquier contenido a la página, tenemos que ejecutar un método del objeto xajax para procesar las peticiones del que puedan llegar a la página. \n
+                                \n
+                                //El objeto xajax tiene que procesar cualquier petición \n
+                                $xajax->processRequests;\n
+                                \n
+                                Insistimos, esta llamada al método se tiene que hacer antes de escribir ningún contenido dentro del código de la página, es decir, antes que llegue al cliente ningún carácter de código HTML. \n
+                                \n
+                                6 Escribir el código javascript necesario para procesar las llamadas a ajax. \n
+                                \n</item>
+        <item>Enviar los datos del formulario a PHP con xajax
+                                \n
+                                Tenemos un par de campos de texto y un botón, que se encargará lanzar el proceso para enviar y procesar los datos. Para ello, el botón tiene un comando para el evento onclick, que trataremos de explicar.\n
+                                \n
+                                Ahora con xajax vamos a disponer de un método Javascript llamado xajax.getFormValuesID_FORMULARIO, que recibe el identificador del formulario que se desean obtener los datos. Esta función nos sirve generar los datos del formulario que debemos enviar para su procesamiento. En nuestro caso el formulario tiene el id=\"formulario\", así que lo invocamos:\n
+                                \n
+                                xajax.getFormValues\'formulario\'\n
+                                \n
+                                Los datos del formulario los tenemos que pasar a la función que se encarga de procesarlos, que es una función que hemos escrito con PHP y luego hemos registrado en el objeto xajax. Veremos esa función a continuación.\n
+                                \n
+                                Recibir los datos del formulario enviado con xajax\n
+                                \n
+                                Desde PHP estaríamos acostumbrados a recoger los datos de un formulario con $_POST o $_GET, pero ahora lo vamos a tener que hacer de una manera distinta.\n
+                                \n
+                                Como hemos visto antes, a la función que procesa los el formulario se le envía un parámetro con los datos. Pues ese mismo parámetro es el que tenemos que utilizar para recibir los datos del formulario. Los datos del formulario nos llegan como un array asociativo, por tanto, cuando programemos la función en PHP, el método de trabajo será similar al que utilizaríamos con $_POST y $_GET, que también son arrays asociativos.\n
+                                \n
+                                function procesar_formulario$form_entrada{\n
+                                   $salida = \"Gracias por enviarnos tus datos. Hemos procesado esto:\n
+                                   $salida .= \"Nombre: \" . $form_entrada[\"nombre\"];\n
+                                   $salida .= \"Apellidos: \" . $form_entrada[\"apellidos\"];\n
+                                   \n
+                                   //instanciamos el objeto para generar la respuesta con ajax\n
+                                   $respuesta = new xajaxResponse;\n
+                                   //escribimos en la capa con id=\"respuesta\" el texto que aparece en $salida\n
+                                   $respuesta->addAssign\"mensaje\",\"innerHTML\",$salida;\n
+                                   \n
+                                   //tenemos que devolver la instanciación del objeto xajaxResponse\n
+                                   return $respuesta;\n
+                                }\n
+                                \n
+                                La función que procesa el formulario se llama procesar_formulario y recibe un parámetro que es el array asociativo con los datos del formulario. Esa función compone una salida y luego la devuelve con Ajax.\n
+                                \n
+                                Para ello crea un objeto de la clase xajaxResponse y con el método addAssign\"mensaje\",\"innerHTML\",$salida consigue que en la capa con id=\"mensaje\" se muestre la salida del procesamiento del formulario.\n
+                                \n
+                                No hay que olvidarse de registrar la función en el objeto xajax\n
+                                \n
+                                //registramos la función creada anteriormente al objeto xajax\n
+                                $xajax->registerFunction\"procesar_formulario\";\n
+                                \n
+                                Pero todas estas generalidades y códigos adicionales necesarios para utilizar xajax los hemos visto en el artículo anterior: Xajax: Ajax para PHP.\n
+                                \n
+                                El código completo de este ejemplo es el siguiente:\n
+                                \n
+                                Actualizado: Este código está con Xajax 0.2.5. Pero si quieres saber cómo pasarlo a la versión más moderna, tienes que entrar en: Actualiza tu framework a Xajax 0.5.\n
+                                \n
+                                //incluímos la clase ajax\n
+                                require \'xajax/xajax.inc.php\';\n
+                                \n
+                                //instanciamos el objeto de la clase xajax\n
+                                $xajax = new xajax; \n
+                                \n
+                                function procesar_formulario$form_entrada{\n
+                                   $salida = \"Gracias por enviarnos tus datos. Hemos procesado esto:";\n
+                                   $salida .= \"Nombre: \" . $form_entrada[\"nombre\"];\n
+                                   $salida .= \"Apellidos: \" . $form_entrada[\"apellidos\"];\n
+                                   \n
+                                   //instanciamos el objeto para generar la respuesta con ajax\n
+                                   $respuesta = new xajaxResponse;\n
+                                   //escribimos en la capa con id=\"respuesta\" el texto que aparece en $salida\n
+                                   $respuesta->addAssign\"mensaje\",\"innerHTML\",$salida;\n
+                                   \n
+                                   //tenemos que devolver la instanciación del objeto xajaxResponse\n
+                                   return $respuesta;\n
+                                }\n
+                                //registramos la función creada anteriormente al objeto xajax\n
+                                $xajax->registerFunction\"procesar_formulario\";\n
+                                \n
+                                //El objeto xajax tiene que procesar cualquier petición\n
+                                $xajax->processRequest;\n
+                                ?>\n
+                                </item>
+        <item>El formulario que hemos utilizado es muy parecido al anterior. Sólo le hemos añadido un campo más, de tipo checkbox, para realizar una validación un poco más compleja. Además, hemos incorporado una capa más para mostrar mensajes.
+        La capa de mensajes nos servirá para mostrar textos, como errores de validación, cuando se produzcan. El formulario está en una capa independiente, que sólo actualizaremos si finalmente se realiza el procesamiento de sus datos.
+                                \n
+                                Ahora veamos la función PHP que realizará la validación. Si se produjeron errores en la validación actualizará la capa \"mensaje\" para mostrar el error. Si todo es correcto, procesará el formulario, mostrará un mensaje de confirmación en la capa \"mensaje\" y el resultado de procesar el formulario en la capa \"capaformulario\". Es una función un poco larga: \n
+                                \n
+                                function procesar_formulario$form_entrada{\n
+                                   //creo el xajaxResponse para generar una salida\n
+                                   $respuesta = new xajaxResponse\'ISO-8859-1\';\n
+                                \n
+                                   //validación\n
+                                   $error_form = \"\";\n
+                                   if $form_entrada[\"nombre\"] == \"\"\n
+                                      $error_form = \"Debes escribir tu nombre\";\n
+                                   elseif $form_entrada[\"apellidos\"] == \"\"\n
+                                      $error_form = \"Debes escribir tus apellidos\";\n
+                                   elseif !isset$form_entrada[\"acepto\"]\n
+                                      $error_form = \"Debes aceptar los términos y condiciones\";\n
+                                      \n
+                                   //compruebo resultado de la validación\n
+                                   if $error_form != \"\"{\n
+                                      //Hubo un error en el formulario\n
+                                      //en la capa donde se muestran mensajes, muestro el error\n
+                                      $respuesta->addAssign\"mensaje\",\"innerHTML\",\"";\n
+                                   }else{\n
+                                     //es que no hubo error en el formulario\n
+                                      $salida = \"Hemos procesado esto:";\n
+                                      $salida .= \"Nombre: \" . $form_entrada[\"nombre\"];\n
+                                      $salida .= \"Apellidos: \" . $form_entrada[\"apellidos\"];\n
+                                      \n
+                                      //mostramos en capa mensaje el texto que está todo correcto\n
+                                      $respuesta->addAssign\"mensaje\",\"innerHTML\",\"Todo correcto... Muchas gracias!\";\n
+                                      //escribimos en la capa con id=\"capaformulario\" el texto que aparece en $salida\n
+                                      $respuesta->addAssign\"capaformulario\",\"innerHTML\",$salida;\n
+                                      \n
+                                      //tenemos que devolver la instanciación del objeto xajaxResponse\n
+                                   }\n
+                                   return $respuesta;\n
+                                }\n
+                                \n
+                                La función está comentada, por lo que se podrá entender. Lo importante es fijarse en cómo se instancia el objeto de la clase xajaxResponse y cómo se invocan los distintos métodos para actualizar el contenido de las capas \"mensaje\" y \"capaformulario\". \n
+                                \n
+                                Luego está el tema de las validaciones y la comprobación para saber si hubo un error o no en los datos. Este podría servir de esquema general, pero tema de las validaciones cada persona lo tendrá que implementar según sus necesidades.
+        </item>
+        <item>También vamos a ver un par de detalles acerca de los acentos en Ajax, que nos resolverán más de un dolor de cabeza. Posiblemente hayamos podido comprobar en este ejemplo, o en otros anteriores de Ajax, que los acentos muchas veces se ven mal, convertidos en algún carácter raro. Esto lo podemos solucionar de varias maneras con xajax, y nosotros hemos implementado una de ellas en este ejemplo.
+                                \n
+                                Primero, cuando se crea la instancia del objeto xajax, podemos decirle con qué juego de caracteres queremos trabajar. Y además, podemos decirle que cualquier cadena que nos envíen por POST o GET se convierta automáticamente al juego de caracteres que estamos usando. \n
+                                \n
+                                //instanciamos el objeto de la clase xajax \n
+                                $xajax = new xajax; \n
+                                $xajax->setCharEncoding\'ISO-8859-1\'; \n
+                                $xajax->decodeUTF8InputOn \n
+                                \n
+                                Luego, cuando hacemos las instancias del objeto de la clase xajaxResponse para generar la salida, también tenemos que indicar en qué juego de caracteres estamos trabajando, si no podría dar problemas. \n
+                                \n
+                                $respuesta = new xajaxResponse\'ISO-8859-1\'; \n
+                                \n
+                                Esto se hace en la función PHP que procesa los datos y genera la salida. Ya habíamos visto anteriormente el código de esta función. \n
+                                \n
+                                Así quedaría el código completo de este ejemplo: \n
+                                \n
+                                //incluímos la clase ajax\n
+                                require \'xajax/xajax.inc.php\';\n
+                                \n
+                                //instanciamos el objeto de la clase xajax\n
+                                $xajax = new xajax; \n
+                                $xajax->setCharEncoding\'ISO-8859-1\';\n
+                                $xajax->decodeUTF8InputOn;\n
+                                \n
+                                function procesar_formulario$form_entrada{\n
+                                   //creo el xajaxResponse para generar una salida\n
+                                   $respuesta = new xajaxResponse\'ISO-8859-1\';\n
+                                \n
+                                   //validación\n
+                                   $error_form = \"\";\n
+                                   if $form_entrada[\"nombre\"] == \"\"\n
+                                      $error_form = \"Debes escribir tu nombre\";\n
+                                   elseif $form_entrada[\"apellidos\"] == \"\"\n
+                                      $error_form = \"Debes escribir tus apellidos\";\n
+                                   elseif !isset$form_entrada[\"acepto\"]\n
+                                      $error_form = \"Debes aceptar los términos y condiciones\";\n
+                                      \n
+                                   //compruebo resultado de la validación\n
+                                   if $error_form != \"\"{\n
+                                      //Hubo un error en el formulario\n
+                                      //en la capa donde se muestran mensajes, muestro el error\n
+                                      $respuesta->addAssign\"mensaje\",\"innerHTML\",\"\";\n
+                                   }else{\n
+                                      //es que no hubo error en el formulario\n
+                                      $salida = \"Hemos procesado esto:";\n
+                                      $salida .= \"Nombre: \" . $form_entrada[\"nombre\"];\n
+                                      $salida .= \"Apellidos: \" . $form_entrada[\"apellidos\"];\n
+                                      \n
+                                      //mostramos en capa mensaje el texto que está todo correcto\n
+                                      $respuesta->addAssign\"mensaje\",\"innerHTML\",\"\";\n
+                                      //escribimos en la capa con id=\"capaformulario\" el texto que aparece en $salida\n
+                                      $respuesta->addAssign\"capaformulario\",\"innerHTML\",$salida;\n
+                                      \n
+                                      //tenemos que devolver la instanciación del objeto xajaxResponse\n
+                                   }\n
+                                   return $respuesta;\n
+                                }\n
+                                //registramos la función creada anteriormente al objeto xajax\n
+                                $xajax->registerFunction\"procesar_formulario\";\n
+                                \n
+                                //El objeto xajax tiene que procesar cualquier petición\n
+                                $xajax->processRequests;\n
+                                ?>\n
+        </item>
+        <item>El trabajo con sesiones en Ajax y en concreto utilizando el framework de Xajax, no difiere del que ya conocemos para aplicaciones PHP generales, en resumen:\n
+                                1\tTenemos que iniciar la sesión antes de enviar ninguna información o texto al navegador. \n
+                                \n
+                                session_start;\n
+                                \n
+                                2\tTenemos que acceder a variables de sesión a través de $_SESSION. \n
+                                \n
+                                $_SESSION[\"nombre_variable\"] = \"valor cualquiera\";\n
+                                En cuanto al juego del ahorcado, me figuro que es de sobra conocido por todos. Consiste en adivinar una palabra, probando letra a letra. Si la letra está en la palabra, se descubre y si la letra no estaba en la palabra se apunta un fallo. Se gana cuando se han adivinado todas las letras de la palabra y se pierde si se llega al máximo de los fallos permitidos. \n
+                                \n
+                                Podemos ver el ejemplo en marcha. En Xajax podremos utilizar variables de sesión de manera normal. Tenemos que asegurarnos que la sesión se abra, por lo que vamos a iniciar el código con la apertura de la sesión. Luego meteremos el include con la librería xajax y la instanciación del objeto. \n
+                                \n
+                                session_start;\n
+                                \n
+                                //incluímos la clase ajax\n
+                                require \'xajax/xajax.inc.php\';\n
+                                \n
+                                //instanciamos el objeto de la clase xajax\n
+                                $xajax = new xajax; \n
+                                $xajax->setCharEncoding\'ISO-8859-1\';\n
+                                $xajax->decodeUTF8InputOn;\n
+                                \n
+                                Luego tendremos que crear una serie de funciones PHP, algunas para llamar como respuesta a acciones del usuario por medio de Ajax. Tenemos dos funciones principales: 1 La función para iniciar el juego. Esta función la llamaremos al terminar de cargar la página y cuando el usuario pulse el botón \"Reiniciar\". Elige una palabra aleatoriamente, inicializa los fallos, los aciertos, etc. Todas esas variables que se inicializan se tienen que conservar durante todo el juego, por lo que se guardan en variables de sesión. \n
+                                \n
+                                function iniciar{\n
+                                   $palabras = array\"murciélago\", \"otorrinolaringologo\", \"constitución\", \"deshidratación\", \"laboratorio\", \"acomodarse\", \"microperforado\",\"descontrolados\", \"superproducción\";\n
+                                   //defino un número aleatorio para sacar una palabra entre las posibles\n
+                                   mt_srandtime;\n
+                                   $indice_aleatorio = mt_rand0,count$palabras-1;\n
+                                   \n
+                                   //creo variable de sesión con la palabra\n
+                                   $_SESSION[\"palabra\"] = $palabras[$indice_aleatorio];\n
+                                   //creo variable de sesión con los aciertos\n
+                                   $_SESSION[\"aciertos\"] = array;\n
+                                   //creo una variable con el número de fallos\n
+                                   $_SESSION[\"fallos\"] = 0;\n
+                                   //creo la variable para decir que no ha perdido\n
+                                   $_SESSION[\"sin_jugar\"] = false;\n
+                                   \n
+                                   //genero lo que se verá de la palabra\n
+                                   $palabra_vista = genera_palabra_aciertos;\n
+                                   $fallos_actuales = genera_fallos_actuales;\n
+                                   \n
+                                   $respuesta = new xajaxResponse\'ISO-8859-1\';\n
+                                   $respuesta->addAssign\"palabra\",\"innerHTML\",$palabra_vista;\n
+                                   $respuesta->addAssign\"fallos\",\"innerHTML\",$fallos_actuales;\n
+                                   return $respuesta;\n
+                                }\n
+                                \n
+                                Hay que fijarse en el momento que se crean las variables de sesión, con el array asociativo $_SESSION[\"indice_de_variable\"], tal como estamos acostumbrados a hacer habitualmente. \n
+                                \n
+                                Luego nos fijamos en que se genera la palabra con los aciertos y los fallos actuales y se meten por ajax como contenidos de las capas, con el método addAssign de xajax. \n
+                                \n
+                                $respuesta->addAssign\"palabra\",\"innerHTML\",$palabra_vista;\n
+                                $respuesta->addAssign\"fallos\",\"innerHTML\",$fallos_actuales;\n
+                                \n
+                                Las particularidades de xajax las venimos comentando en artículos anteriores del manual de Xajax. \n
+                                \n
+                                2 La función para probar una letra, para ver si está en la palabra buscada. Esta función la llamaremos desde Javascript con Ajax cuando el usuario escriba una letra y pulse el botón para probarla. \n
+                                \n
+                                Veremos que hace uso de las variables de sesión creadas en la función anterior, de la manera habitual que venimos trabajando, con el array asociativo $_SESSION. \n
+                                \n
+                                function probar_letra$letra{\n
+                                   global $fallos_permitidos;\n
+                                   \n
+                                   $respuesta = new xajaxResponse\'ISO-8859-1\';\n
+                                   \n
+                                   //compruebo que he recibido una letra\n
+                                   if$_SESSION[\"sin_jugar\"]{\n
+                                      $advierte_perdido = \"" . genera_fallos_actuales . \"\";\n
+                                      $respuesta->addAssign\"fallos\",\"innerHTML\",$advierte_perdido;\n
+                                   }elseif strlen$letra!=1{\n
+                                      $envia_letra = \"" . genera_fallos_actuales;\n
+                                      $respuesta->addAssign\"fallos\",\"innerHTML\",$envia_letra;\n
+                                   }else{\n
+                                      //miro si la letra está entre las de la palabra\n
+                                      if strpos$_SESSION[\"palabra\"],$letra === false{\n
+                                         //es que no estaba\n
+                                         $_SESSION[\"fallos\"] ++;\n
+                                         //actualizo los fallos\n
+                                         $fallos_actuales = genera_fallos_actuales;\n
+                                         $respuesta->addAssign\"fallos\",\"innerHTML\",$fallos_actuales;\n
+                                         //compruebo que no me haya pasado de fallos\n
+                                         if $_SESSION[\"fallos\"] == $fallos_permitidos{\n
+                                            //si ha perdido, le muestro la palabra\n
+                                            $palabra_entera = \"Has perdido! la palabra era: <b>\" . genera_palabra_entera . \"</b>\";\n
+                                            $respuesta->addAssign\"palabra\",\"innerHTML\",$palabra_entera;\n
+                                            $_SESSION[\"sin_jugar\"] = true;\n
+                                         }\n
+                                      }else{\n
+                                         //es que la letra está en la cadena\n
+                                         $_SESSION[\"aciertos\"][count$_SESSION[\"aciertos\"]] = $letra;\n
+                                         //genero lo que se verá de la palabra\n
+                                         $palabra_vista = genera_palabra_aciertos;\n
+                                         //compruebo si has ganado ya\n
+                                         if strpos$palabra_vista,\"_\"===false{\n
+                                            //si no hay un \"_\" en la palabra vista es que ya ha visto todas las letras\n
+                                            $palabra_vista = \"Has ganado! la palabra es: <b>\" . $palabra_vista . \"</b>\";\n
+                                            $_SESSION[\"sin_jugar\"] = true;\n
+                                         }\n
+                                         $respuesta->addAssign\"palabra\",\"innerHTML\",$palabra_vista;\n
+                                    }\n
+                                   }\n
+                                   return $respuesta;\n
+                                }\n
+                                \n
+                                La función es un poco larga, porque implementa casi toda la lógica del juego. Ahora no vamos a dar explicaciones sobre la lógica del juego del ahorcado, pero podemos ver que la función está comentada, así se pueda entender qué se hace en cada paso.
+                                \n
+                                Comprobaremos que se van accediendo a las variables de sesión y que se van generando respuestas a través de los métodos del objeto xajaxResponse. \n
+                                \n
+                                Conclusión sobre variables de sesión en Ajax \n
+                                \n
+                                Es indiferente que estemos trabajando dentro de Ajax por lo que respecta al manejo de la sesión con PHP. Las variables de sesión almacenan sus valores y los recuerdan sin problemas durante toda la ejecución de la aplicación, en las distintas llamadas generadas a PHP a través de Ajax \n
+                                \n
+                                El juego del ahorcado tiene cierta complejidad, en la que no hemos querido ahondar demasiado. Todavía habría que hacer cosas importantes para que fuera totalmente funcional, como la gestión de acentos para asegurarse que, cuando el usuario pruebe si hay una vocal, nos muestre la vocal tanto si está acentuada como si no. En el juego actual si probamos, por ejemplo la \"e\" no nos mostraría la \"é\" e con tilde, si es que la hay.
+                       </item>
+        <item>Las funciones de Xajax que permiten incluir o quitar declaraciones de estilos pertenecen al objeto de la clase xajaxResponse, que instanciamos en las funciones PHP que se tienen que procesar por medio de Ajax.
+                                \n
+                                includeCSS\'nuevo_estilo.css\' \n
+                                El método includeCSS sirve para incluir un link con una declaración de estilos en el HEAD de la página. Recibe el archivo, o mejor dicho, la ruta del archivo CSS que se desea incluir. \n
+                                \n
+                                removeCSS\'estilo_a_quitar.css\' \n
+                                El método removeCSS sirve para eliminar un link a una declaración de estilos insertada anteriormente con includeCSS de Xajax. Recibe la ruta del archivo CSS que se desea quitar. \n
+                                \n
+                                waitForCSS \n
+                                El método waitForCSS sirve para obligar al objeto response a esperar que finalice la carga de un CSS antes de continuar realizando acciones.
+                        </item>
+        <item>Refuerza tus conocimientos!!!</item>
+        </string-array>
+
+    <!-- ****************Quiz de certificacion  ****************** -->
+
+    <string-array name="quiz_cerfiticacion">
+
+        <item>Refuerza tus conocimientos!!!</item>
+    </string-array>
+
+    <string-array name="quiz_contenido">
+        <item>Quiz de certificación</item>
+
+
+    </string-array>
+
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="btn_video">Ver Video</string>
+    <string name="btn_audio">Reproducir Audio</string>
+
+
+    <string name="pausar">Pausar</string>
+    <string name="reproducir">Reproducir</string>
+
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_menssage_error_dos">Atención, campos requeridos!!</string>
+    <string name="button_menssage_error">Aceptar</string>
+    <string name="tiulo_progreso_menu_bar">Progreso</string>
+    <string name="mensaje_ocultar">Ocultar</string>
+    <string name="mensaje_ocultar_toast">Ocultado</string>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="str_contrasenia">Contraseña</string>
+    <string name="str_aceptar">Aceptar</string>
+    <string name="str_registrarse">Registrarse</string>
+    <string name="str_next">Siguiente</string>
+
+    <string name="str_comienzo">Presiona la Imagen AJAX Para Comenzar\n \n \n</string>
+
+    <string name="title_activity_tes">Tic-Tac-Toe</string>
+    <string name="jugar_boton">Play 2 Players</string>
+    <string name="configurar">Settings</string>
+    <string name="acercade">About</string>
+    <string name="salir">Exit</string>
+    <string name="reiniciar">Start Over</string>
+    <string name="cruz">Win the Crosses</string>
+    <string name="juegoAcabado">EN</string>
+    <string name="circulo">Win the Circles</string>
+    <string name="jugar_boton_cpu">Play CPU</string>
+
+
+    <string name="Evento_Calendario"> Añadir Evento</string>
+    <string name="Listado">Añadir Nota</string>
+    <string name="AcercaDe">Acerca De</string>
+    <string name="TituloApp">Agenda</string>
+    <string name="no_notes">No hay notas almacenadas</string>
+    <string name="menu_insert">Insertar Nota</string>
+    <string name="note_name"></string>
+    <string name="body">Mensaje</string>
+    <string name="confirm">OK</string>
+    <string name="title">Titulo</string>
+    <string name="menu_delete">Borrar nota</string>
+    <string name="edit_note">Modificar nota</string>
+    <string name="listado_calendario">Listado Calendario</string>
+    <string name="descripcion">Implementación de Agenda \n Proyecto AJAX \n UTNG</string>
+
+
+
+
+    <string name="play">Jugar</string>
+    <string name="conf">Configuración</string>
+    <string name="acerca">Acerca De</string>
+    <string name="logros">Logros</string>
+    <string name="contenido_acerca">Este juego trata de adivinar una palabra, las palabras son aleatorias.</string>
+    <string name="ranking">Puntuaciones</string>
+    <string name="txt_introduce">Introduce una palabra:</string>
+    <string name="btn_send">Enviar</string>
+    <string name="help1">Ayuda 1:</string>
+    <string name="help2">Ayuda 2:</string>
+    <string name="txt_secreta">Palabra secreta:</string>
+    <string name="intentos">Intentos:</string>
+    <string name="tit">Palabra Secreta</string>
+    <string name="txt_help1">aaa</string>
+    <string name="txt_help2">zzz</string>
+
+
+
+
+    <string name="menu_settingsrap">Settings</string>
+    <string name="title_activity_rapid_test">RapidTest</string>
+    <string name="RapidTest">Rapid Test</string>
+    <string name="play_juego">Jugar</string>
+    <string name="configuration">Configuración</string>
+
+    <string name="rankingtest">Puntuación</string>
+    <string name="exit">Salir</string>
+
+    <string name="textPuntuaciones">Puntuaciones</string><string name="textSinPuntuaciones">No hay puntuaciones</string>
+
+    <string name="textConfiguration">Sobre que quieres que te pregunte.</string>
+    <string name="textTitleConfiguration">Tipo de preguntas.</string>
+    <string name="textTVShows">Ambas</string>
+    <string name="textAnimesAndManga">Animes y Manga</string>
+    <string name="textGames">Videojuegos</string>
+    <string name="preguntaTematica10">¿Qué pareja eran los protagonistas en Resident evil 5?</string>
+    <string name="preguntaTematica11">¿qué erizo se transformaba en Super Saiyan?</string>
+    <string name="preguntaTematica12">¿En qué juegos aparece Link como protagonista?</string>
+    <string name="preguntaTematica13">¿Quién es el padre de Dante?</string>
+    <string name="preguntaTematica14">¿Qué personaje no aparece en Street Fighter?</string>
+    <string name="preguntaTematica15">¿Cuántas clases hay en el Diablo 2 original?</string>
+    <string name="preguntaTematica16">¿A quién rescataba Mario?</string>
+    <string name="preguntaTematica17">¿Qué es Kid Icarus?</string>
+    <string name="preguntaTematica18">Squall era un</string>
+    <string name="preguntaTematica19">¿En qué año salio el Halo?</string>
+    <string name="preguntaTematica1Respuesta81">Angel</string>
+    <string name="preguntaTematica1Respuesta82">Demonio</string>
+    <string name="preguntaTematica1Respuesta83">Medusa</string>
+    <string name="preguntaTematica1Respuesta84">Rana</string>
+    <string name="preguntaTematica20">Gohan es hijo de</string>
+    <string name="preguntaTematica21">Acaba la lista: Seiya, Shiryu, Hyoga, Shun</string>
+    <string name="preguntaTematica22">¿Quién es el protagonista de la serie D. Gray Man?</string>
+    <string name="preguntaTematica23">¿Qué busca Luffy?</string>
+    <string name="preguntaTematica24">Rukia es un</string>
+    <string name="preguntaTematica25">Kakashi lee el manga</string>
+    <string name="preguntaTematica26">¿Cual no es una técnica de la serie naruto?</string>
+    <string name="preguntaTematica27">Kira mataba con</string>
+    <string name="preguntaTematica28">¿Quién es el protagonista de Sword Art Online?</string>
+    <string name="preguntaTematica29">¿Quién es un Dragon Slayer?</string>
+    <string name="preguntaTematica2Respuesta31">Las bolas de dragon</string>
+    <string name="preguntaTematica2Respuesta32">Anillos</string>
+    <string name="preguntaTematica2Respuesta51">El ninja que me clavo su katana.</string>
+    <string name="preguntaTematica2Respuesta71">una libreta</string>
+    <string name="preguntaTematica2Respuesta72">el pensamiento</string>
+    <string name="preguntaTematica2Respuesta73">un ordenador</string>
+    <string name="preguntaTematica2Respuesta74">la mirada</string>
+    <string name="botonJuego">Siguiente</string>
+    <string name="textPideNombre">Introduzca su nombre para insertarlo en la lista de las puntuaciones. Solo salen los 10 primeros.</string>
+    <string name="titlePideNombre">Nombre</string>
+    <string name="aceptar">Aceptar</string>
+
+
+
+
+    <string name="usuario">Usuario</string>
+    <string name="clave">Clave</string>
+    <string name="acceder">Acceder</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="cuenta">Tu cuenta</string>
+    <string name="error_autenticar">Datos Erroneos</string>
+    <string name="login_valido">carmen</string>
+    <string name="clave_valida">123</string>
+    <string name="registrar">Registrar</string>
+    <string name="edt_usuario">Usuario</string>
+    <string name="edt_contrasenia">Contraseña</string>
+    <string name="btn_acceder">Acceder</string>
+    <string name="btn_registrarse">Registrarse</string>
+    <string name="btn_registrate">Registrarse</string>
+
+
+
+
+</resources>

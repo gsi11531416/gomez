@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item android:title="Agenda"
+        android:id="@+id/itm_agenda"></item>
+    <item
+        android:title="Audio"
+        android:id="@+id/itm_Audio"
+        ></item>
+
+    <item android:title="Calculadora"
+        android:id="@+id/itm_cal"></item>
+
+    <item
+        android:title="Video"
+        android:id="@+id/itm_video"
+        ></item>
+
+    <item android:title="Audio Tutorial"
+        android:id="@+id/itm_audicom"></item>
+
+    <item android:title="Avances del Curso"
+        android:id="@+id/itm_avance"></item>
+
+    <item android:title="Juego Tres En Raya"
+        android:id="@+id/itm_juego">
+    </item>
+
+    <item android:title="Juego Palabras"
+        android:id="@+id/itm_juegopa"></item>
+
+<item android:title="Juego Rapid Test"
+    android:id="@+id/itm_rapid"></item>
+    <item
+        android:title="Desarrollador"
+        android:id="@+id/itm_desarrollador"
+        ></item>
+    <item android:title="Dinamica de Ayuda"
+        android:id="@+id/itm_dinamica"></item>
+
+    <item
+        android:title="Configuraciones"
+        android:id="@+id/itm_seting"></item>
+
+    <item android:title="Enviar Correo"
+        android:id="@+id/itm_correo"></item>
+
+    <item
+        android:title="Salir"
+        android:id="@+id/itm_salir"
+        ></item>
+</menu>
